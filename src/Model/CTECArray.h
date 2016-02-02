@@ -18,11 +18,10 @@ private:
 public:
 	CTECArray(int size);
 	virtual ~CTECArray();
+
+	Type* get(int pos);
 	int getSize();
 	void set(int pos, Type value);
-	Type get(int pos);
-
-
 };
 
 #endif /* MODEL_CTECARRAY_H_ */
