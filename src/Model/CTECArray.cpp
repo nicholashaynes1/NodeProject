@@ -12,17 +12,17 @@ CTECArray<Type>::CTECArray(int size)
 {
 	this->size = size;
 
-
 }
 template<class Type>
-CTECArray<Type>::~CTECArray() {
+CTECArray<Type>::~CTECArray()
+{
 	// TODO Auto-generated destructor stub
 }
 
 template<class Type>
 Type* CTECArray<Type>::get(int pos)
 {
-	if(pos >= size|| pos < 0)
+	if (pos >= size || pos < 0)
 	{
 		cerr << "position value is out of bounds:(" << endl;
 		return nullptr;
@@ -30,9 +30,9 @@ Type* CTECArray<Type>::get(int pos)
 	else
 	{
 		ArrayNode<Type> * current = head;
-		for(int spot = 0; spot<=pos; spot++)
+		for (int spot = 0; spot <= pos; spot++)
 		{
-			if(spot != pos)
+			if (spot != pos)
 			{
 				current = current->next;
 			}
@@ -53,5 +53,26 @@ int CTECArray<Type>::getSize()
 template<class Type>
 void CTECArray<Type>::set(int pos, Type value)
 {
+	if (pos >= size || pos < 0)
+	{
+		cerr << "position value is out of bounds:(" << endl;
+		return nullptr;
+	}
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for (int spot = 0; spot <= pos; spot++)
+		{
+			if (spot != pos)
+			{
+				current = current->next;
+			}
+			else
+			{
+				current->setValue(value);
+			}
+		}
+
+}
 
 }
