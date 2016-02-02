@@ -16,8 +16,13 @@ private:
 	int size;
 	ArrayNode<Type> * head;
 public:
-	CTECArray();
+	CTECArray(int size);
 	virtual ~CTECArray();
+	int getSize();
+	void set(int pos, Type value);
+	Type get(int pos);
+
+
 };
 
 #endif /* MODEL_CTECARRAY_H_ */
