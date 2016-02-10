@@ -11,15 +11,7 @@ using namespace std;
 NodeController :: NodeController()
 {
  //auto-generated constructor
-
-	stringNode.setValue("hgjkghdfghfkjlgjkldhg");
-	intNode.setValue(3);
-
-	stringArrayNode.setValue("Words");
-	otherArrayNode.setValue("linked node");
-	stringArrayNode.setNext(&otherArrayNode);
-
-
+notHipsterInts = new CTECArray<int>(5);
 }
 
 NodeController :: ~NodeController()
@@ -31,7 +23,15 @@ NodeController :: ~NodeController()
 
 void NodeController :: start()
 {
-	cout << "the contents of stringNode are " << stringNode.getValue() << endl;
-	cout << "the contents of StringArrayNode are: " << stringArrayNode.getValue() << endl;
-	cout << "this is connected to StringArrayNext: " << (*stringArrayNode.getNext()).getValue() << endl;
+	for(int index = 0; index < notHipsterInts->getSize(); index++)
+	{
+		notHipsterInts->set(index, (index *23));
+	}
+
+	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)
+	{
+		cout << "the contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
+	}
+
+
 }
