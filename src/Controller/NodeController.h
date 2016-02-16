@@ -13,6 +13,7 @@
 #include "../Model/ArrayNode.h"
 #include "../Model/CTECArray.h"
 #include "../Model/CTECArray.cpp"
+#include "../Model/Timer.h"
 
 
 #include <string>
@@ -21,7 +22,7 @@ using namespace std;
 class NodeController
 {
 private:
-
+	Timer arrayTimer;
 	CTECArray<int> * notHipsterInts;
 
 public:

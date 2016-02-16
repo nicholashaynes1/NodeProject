@@ -22,7 +22,8 @@ NodeController :: ~NodeController()
 
 
 void NodeController :: start()
-{
+{	arrayTimer.startTimer();
+
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index, (index *23));
@@ -30,8 +31,10 @@ void NodeController :: start()
 
 	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)
 	{
-		cout << "the contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
+		cout << "tuh contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
 	}
 
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInfo();
 
 }
