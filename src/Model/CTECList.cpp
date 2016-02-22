@@ -24,19 +24,19 @@ CTECList<Type>::~CTECList()
 }
 
 template<class Type>
-void CTECList<Type>:: addAtIndex()
+void CTECList<Type>:: addAtIndex(int index, const Type& value)
 {
 
 }
 
 template<class Type>
-void CTECList<Type>::addToEnd()
+void CTECList<Type>::addToEnd(const Type& value)
 {
 
 }
 
 template<class Type>
-void CTECList<Type>::addToFront()
+void CTECList<Type>::addToFront(const Type& value)
 {
 
 }
@@ -44,4 +44,5 @@ template<class Type>
 Type CTECList<Type>::removeFromFront()
 {
 	ArrayNode<Type> * newHead = new ArrayNode<Type>();
+	newHead = head->getNext();
 }

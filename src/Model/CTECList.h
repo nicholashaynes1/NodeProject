@@ -19,15 +19,15 @@ private:
 public:
 	CTECList();
 	virtual ~CTECList();
-	void addAtIndex();
-	void addToFront();
-	void addToEnd();
+	void addAtIndex(int index, const Type& value);
+	void addToFront(const Type& value);
+	void addToEnd(const Type& value);
 	Type removeFromPosition();
 	Type removeFromFront();
 	Type removeFromBack();
 	Type getEnd();
 	Type getFront();
-	Type getPosition();
+	Type getFromIndex(int index);
 	Type set(int index, const Type& Value);
 };
 
