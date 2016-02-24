@@ -22,7 +22,7 @@ public:
 	void addAtIndex(int index, const Type& value);
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
-	Type removeFromPosition();
+	Type removeFromPosition(int index);
 	Type removeFromFront();
 	Type removeFromBack();
 	Type getEnd();
