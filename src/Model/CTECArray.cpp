@@ -105,4 +105,15 @@ void CTECArray<Type>::set(int pos, const Type& value)
 
 		}
 
+
+
 }
+
+
+
+
+
+
+
+
+

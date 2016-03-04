@@ -16,15 +16,16 @@ private:
 	int size;
 	ArrayNode<Type> * head;
 	ArrayNode<Type> * end;
+	void calculateSize();
 public:
 	CTECList();
 	virtual ~CTECList();
 	void addAtIndex(int index, const Type& value);
-	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
-	Type removeFromPosition(int index);
+	void addToFront(const Type& value);\
 	Type removeFromFront();
-	Type removeFromBack();
+	Type removeFromIndex(int index);
+	Type removeFromEnd();
 	Type getEnd();
 	Type getFront();
 	Type getFromIndex(int index);
