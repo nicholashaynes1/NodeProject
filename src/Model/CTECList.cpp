@@ -53,6 +53,8 @@ void CTECList<Type>::addAtIndex(int index, const Type& value)
 		currentSpot = currentSpot->getNext();
 	}
 
+	calculateSize();
+
 }
 template<class Type>
 void CTECList<Type>::addToEnd(const Type& value)
@@ -66,6 +68,8 @@ void CTECList<Type>::addToEnd(const Type& value)
 	currentSpot->setNext(newNext);
 	newNext->setNext(nullptr);
 
+
+	calculateSize();
 }
 template<class Type>
 void CTECList<Type>::addToFront(const Type& value)
@@ -77,6 +81,7 @@ void CTECList<Type>::addToFront(const Type& value)
 	newFirst->setNext(current);
 	head = newFirst;
 
+	calculateSize();
 }
 template<class Type>
 Type CTECList<Type>::removeFromFront()
@@ -94,6 +99,7 @@ Type CTECList<Type>::removeFromFront()
 
 	return thingToRemove;
 
+	calculateSize();
 }
 template<class Type>
 Type CTECList<Type>::removeFromIndex(int index)
@@ -125,6 +131,8 @@ Type CTECList<Type>::removeFromIndex(int index)
 	previousSpot->setNext(newNext);
 
 	return storedValue;
+
+	calculateSize();
 }
 template<class Type>
 Type CTECList<Type>::removeFromEnd()
@@ -154,7 +162,14 @@ Type CTECList<Type>::removeFromEnd()
 		current = end;
 		current->setNext(nullptr);
 	}
+
+
+
+	calculateSize();
+
 }
+
+
 template<class Type>
 Type CTECList<Type>::getEnd()
 {
