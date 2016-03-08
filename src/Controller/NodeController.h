@@ -10,8 +10,6 @@
 #include "../Model/Node.h"
 #include "../Model/Node.cpp"
 #include "../Model/ArrayNode.cpp"
-#include "../Model/ArrayNode.h"
-#include "../Model/CTECArray.h"
 #include "../Model/CTECArray.cpp"
 #include "../Model/Timer.h"
 

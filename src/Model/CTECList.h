@@ -30,6 +30,7 @@ public:
 	Type getFront();
 	Type getFromIndex(int index);
 	Type set(int index, const Type& Value);
+	int getSize();
 };
 
 #endif /* MODEL_CTECLIST_H_ */
