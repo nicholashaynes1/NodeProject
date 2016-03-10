@@ -14,8 +14,10 @@ class ArrayNode: public Node<Type>
 {
 private:
 	ArrayNode * next;
+	Type value;
 
 public:
+
 	ArrayNode();
 	ArrayNode(const Type& value);
 	ArrayNode( const Type& value, ArrayNode * next);
